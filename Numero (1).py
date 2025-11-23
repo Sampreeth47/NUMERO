@@ -7,23 +7,9 @@ print('\033[97mList of Topics : \n1. Algebra \n2. Limits & Derivatives \n3. Inte
 print('\n7 Topics!! \033[93m#ThalaForAReason')
 
 print('\033[97m')
-c=int(input('Choose a topic(number)'))
+c=int(input('Choose a topic(number) : '))
+print()
 
-match c:
-    case 1:
-        Algebra()
-    case 2:
-        Limits_Derivatives()
-    case 3:
-        Integrals()
-    case 4:
-        Vectors()
-    case 5:
-        Permutation_Combination()
-    case 6:
-        Complex_Numbers()
-    case 7:
-        Trigonometry()
 
 def select_level(fu):
     def wrapper():
@@ -75,7 +61,7 @@ def topic():
                 Trigonometry()
                 f=True
             case 8:
-                print('Thank you for playing {}!!\n')
+                print(f'Thank you for playing {n}!!\n')
                 print('                  \U0001F64Fಶುಭಂ\U0001F64F')
                 f=True
                 return
@@ -188,3 +174,20 @@ def Complex_Numbers():
 
 def Trigonometry():
     pass
+
+match c:
+    case 1:
+        Algebra()
+    case 2:
+        Limits_Derivatives()
+    case 3:
+        Integrals()
+    case 4:
+        Vectors()
+    case 5:
+        Permutation_Combination()
+    case 6:
+        Complex_Numbers()
+    case 7:
+        Trigonometry()
+
