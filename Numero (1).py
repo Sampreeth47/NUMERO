@@ -157,31 +157,34 @@ def Algebra(level):
         question_structure(t,a,b,a1,a2,l)
     pass
 
+@select_level
+
 def Limits_Derivatives(level):
-    t='limits_derivaties'
+    t='Limits_Derivatives'
     if level=='e':
-        a="Find the limit: lim(x→2) (3x + 4)"
+        a="Find the Limit: lim(x→2) (3x + 4)"
         a1=10
-        b= "Find the derivative of f(x) = x^2"
-        a2=
+        b= "Find the Derivative of f(x) = x^2"
+        a2= "2x"
         l='easy'
         question_structure(t,a,b,a1,a2,l)
         
     elif level=='m':
-        a="Find the limit: lim(x→0) (sin(x) / x)"
+        a="Find the Limit: lim(x→0) (sin(x) / x)"
         a1=1
-        b="Find the derivative of f(x) = 3x^3 - 5x + 7"
+        b="Find the Derivative of f(x) = 3x^3 - 5x + 7"
         a2="9x^2 - 5"
         l='medium'
         question_structure(t,a,b,a1,a2,l)
 
     elif level=='h':
-        a="Find the limit: lim(x→0) (1 - cos(x)) / x^2"
+        a="Find the Limit: lim(x→0) (1 - cos(x)) / x^2"
         a1=0.5
-        b="Find the derivative of f(x) = e^(2x) * sin(x)"
+        b="Find the Derivative of f(x) = e^(2x) * sin(x)"
         a2= 'e^(2x)*(2sin(x) + cos(x))'
         l='hard'
         question_structure(t,a,b,a1,a2,l)
+    
     pass
 
 def Integrals():
@@ -192,6 +195,8 @@ def Vectors():
 
 def Permutation_Combination():
     pass
+
+@select_level
 
 def Complex_Numbers(level):
     t="Complex_Numbers"
@@ -212,8 +217,8 @@ def Complex_Numbers(level):
         question_structure(t,a,b,a1,a2,l)
 
     elif level=='h':
-        a="Divide (5 + 2i) by (3 - i)"
-        a1="(17/10 + 11/10 i)"
+        a="Simplify: ((2 + 5i)(3 - i)) / (1 + 2i)"
+        a1="(23/5 + 3/5 i)"
         b="Find the argument of (−1 + √3 i)"
         a2=  "120° or 2π/3"
         l='hard'
@@ -238,6 +243,7 @@ match c:
         Complex_Numbers()
     case 7:
         Trigonometry()
+
 
 
 
