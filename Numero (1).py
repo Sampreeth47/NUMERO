@@ -164,24 +164,24 @@ def Limits_Derivatives(level):
     if level=='e':
         a="Find the Limit: lim(x→2) (3x + 4)"
         a1=10
-        b= "Find the Derivative of f(x) = x^2"
-        a2= "2x"
+        b= "Find f′(25) for f(x) = x²"
+        a2=625
         l='easy'
         question_structure(t,a,b,a1,a2,l)
         
     elif level=='m':
         a="Find the Limit: lim(x→0) (sin(x) / x)"
         a1=1
-        b="Find the Derivative of f(x) = 3x^3 - 5x + 7"
-        a2="9x^2 - 5"
+        b= "Find f′(7) if f(x) = 3x³ − 5x + 7"
+        a2=436
         l='medium'
         question_structure(t,a,b,a1,a2,l)
 
     elif level=='h':
-        a="Find the Limit: lim(x→0) (1 - cos(x)) / x^2"
-        a1=0.5
-        b="Find the Derivative of f(x) = e^(2x) * sin(x)"
-        a2= 'e^(2x)*(2sin(x) + cos(x))'
+        a="Find the limit: lim(x→0) (sin(5x) − 5x) / x³"
+        a1=-21
+        b="Find f′(1) for f(x) = x⁵·e³x·sin(2x)"
+        a2=111
         l='hard'
         question_structure(t,a,b,a1,a2,l)
     
@@ -203,24 +203,24 @@ def Complex_Numbers(level):
     if level=='e':
         a= "Find the modulus of (3 + 4i)"
         a1=5
-        b="Find the conjugate of (5 - 7i)"
-        a2="5 + 7i"
+        b="What is the real part of (6 + 9i)?"
+        a2=6
         l='easy'
         question_structure(t,a,b,a1,a2,l)
         
     elif level=='m':
-        a="Add (3 + 2i) and (4 - 5i)"
-        a1="(7 - 3i)"
-        b="Multiply (2 + 3i)(1 - i)"
-        a2="(5 + i)"
+        a="Find the modulus of (6 - 8i)"
+        a1=10
+        b=Find the real part of ( (3 + 4i)(5 − 2i) )
+        a2=23
         l='medium'
         question_structure(t,a,b,a1,a2,l)
 
     elif level=='h':
         a="Simplify: ((2 + 5i)(3 - i)) / (1 + 2i) and find the sum of real and imaginary part"
         a1=5
-        b="Find the argument of (−1 + √3 i)"
-        a2=  "120° or 2π/3"
+        b=Find the imaginary part of (4 + 3i)(2 - 7i)(1 + i)
+        a2=-170
         l='hard'
         question_structure(t,a,b,a1,a2,l)
     pass
@@ -243,6 +243,7 @@ match c:
         Complex_Numbers()
     case 7:
         Trigonometry()
+
 
 
 
