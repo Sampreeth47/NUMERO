@@ -217,8 +217,8 @@ def Complex_Numbers(level):
         question_structure(t,a,b,a1,a2,l)
 
     elif level=='h':
-        a="Simplify: ((2 + 5i)(3 - i)) / (1 + 2i)"
-        a1="(23/5 + 3/5 i)"
+        a="Simplify: ((2 + 5i)(3 - i)) / (1 + 2i) and find the sum of real and imaginary part"
+        a1=5
         b="Find the argument of (−1 + √3 i)"
         a2=  "120° or 2π/3"
         l='hard'
