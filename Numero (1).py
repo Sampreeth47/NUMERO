@@ -211,7 +211,7 @@ def Complex_Numbers(level):
     elif level=='m':
         a="Find the modulus of (6 - 8i)"
         a1=10
-        b=Find the real part of ( (3 + 4i)(5 − 2i) )
+        b='Find the real part of ( (3 + 4i)(5 − 2i)).'
         a2=23
         l='medium'
         question_structure(t,a,b,a1,a2,l)
@@ -243,6 +243,7 @@ match c:
         Complex_Numbers()
     case 7:
         Trigonometry()
+
 
 
 
