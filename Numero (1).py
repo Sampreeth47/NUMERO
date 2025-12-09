@@ -219,7 +219,7 @@ def Complex_Numbers(level):
     elif level=='h':
         a="Simplify: ((2 + 5i)(3 - i)) / (1 + 2i) and find the sum of real and imaginary part"
         a1=5
-        b=Find the imaginary part of (4 + 3i)(2 - 7i)(1 + i)
+        b='Find the imaginary part of (4 + 3i)(2 - 7i)(1 + i).'
         a2=-170
         l='hard'
         question_structure(t,a,b,a1,a2,l)
@@ -243,6 +243,7 @@ match c:
         Complex_Numbers()
     case 7:
         Trigonometry()
+
 
 
 
