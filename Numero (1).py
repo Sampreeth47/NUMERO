@@ -189,11 +189,89 @@ def Limits_Derivatives(level):
 
 def Integrals():
     pass
+@select_level
 
-def Vectors():
+def Vectors(level):
+    t='vectors'
+    if level=='e':
+        a="Find the magnitude of vector (3,4)?"
+        a1=5
+        b="Find the dot product of (2,3) and (3,4)?"
+        a2=11
+        l='easy'
+        question_structure(t,a,b,a1,a2,l)
+    elif level=='m':
+        a="Find the resultant of two vectors having magnitude of 9 and 5 but act in opposite direction?"
+        a1=4
+        b= "Find the resultant of two vectors having magnitude of 9 and 5 and act in same direction?"
+        a2=14
+        l='medium'
+        question_structure(t,a,b,a1,a2,l)
+
+    elif level=='h':
+        a="A vector (12,16) is inclined at an angle 60(degree) to the horizontal direction find the horizontal  components?"
+        a1=10
+        b="If vector has magnitude 25 and makes one component is 7, find the other component?"
+        a2=24
+        l='hard'
+        question_structure(t,a,b,a1,a2,l)
     pass
 
-def Permutation_Combination():
+@select_level
+
+def Permutation_Combination(level):
+    t='vectors'
+    if level=='e':
+        a="How many ways can you arrange the letters of the word 'DOG'?"
+        a1=6
+        b="How many ways can you choose 2 objects from 4?"
+        a2=6
+        l='easy'
+        question_structure(t,a,b,a1,a2,l)
+    elif level=='m':
+        a="How many 3-digit numbers can be formed using digits 1,2,3,4 without repetition?"
+        a1=24
+        b= "In how many ways can 5 people sit in a row?"
+        a2=120
+        l='medium'
+        question_structure(t,a,b,a1,a2,l)
+
+    elif level=='h':
+        a= "In how many ways can 5 boys and 5 girls be seated alternately in a row?"
+        a1=28800
+        b="How many ways can you distribute 5 identical balls into 3 distinct boxes?"
+        a2=21
+        l='hard'
+        question_structure(t,a,b,a1,a2,l)      
+    pass
+
+@select_level
+
+def Complex_Numbers(level):
+    t="Complex_Numbers"
+    if level=='e':
+        a= "Find the modulus of (3 + 4i)"
+        a1=5
+        b="What is the real part of (6 + 9i)?"
+        a2=6
+        l='easy'
+        question_structure(t,a,b,a1,a2,l)
+        
+    elif level=='m':
+        a="Find the modulus of (6 - 8i)"
+        a1=10
+        b='Find the real part of ( (3 + 4i)(5 − 2i)).'
+        a2=23
+        l='medium'
+        question_structure(t,a,b,a1,a2,l)
+
+    elif level=='h':
+        a="Simplify: ((2 + 5i)(3 - i)) / (1 + 2i) and find the sum of real and imaginary part"
+        a1=5
+        b='Find the imaginary part of (4 + 3i)(2 - 7i)(1 + i).'
+        a2=-170
+        l='hard'
+        question_structure(t,a,b,a1,a2,l)
     pass
 
 @select_level
@@ -243,6 +321,7 @@ match c:
         Complex_Numbers()
     case 7:
         Trigonometry()
+
 
 
 
