@@ -3,13 +3,7 @@ n=input('\033[97mName : ')
 print(f'ನಮಸ್ಕಾರ {n}!! Welcome to NUMERA.....')
 print("\033[91mಎಚ್ಚರಿಕೆ: ಬುದ್ಧಿವಂತರಿಗೆ ಮಾತ್ರ!!")
 
-print('\033[97mList of Topics : \n1. Algebra \n2. Limits & Derivatives \n3. Integrals \n4. Vector algebra \n5. Permutation and combination \n6. Complex numbers \n7. Trigonometry')
 print('\n7 Topics!! \033[93m#ThalaForAReason')
-
-print('\033[97m')
-c=int(input('Choose a topic(number) : '))
-print()
-
 
 def select_level(fu):
     def wrapper():
@@ -36,31 +30,31 @@ def topic():
     f=False
     while f==False:
         print('\033[97mList of Topics : \n1. Algebra \n2. Limits & Derivatives \n3. Integrals \n4. Vectors \n5. Permutation and combination \n6. Complex numbers \n7. Trigonometry \n8. Exit')
-        i=int(input('Choose a topic(number) : '))
+        i=input('Choose a topic(number) : ')
         print()
         match i:
-            case 1:
+            case '1':
                 Algebra()
                 f=True
-            case 2:
+            case '2':
                 Limits_Derivatives()
                 f=True
-            case 3:
+            case '3':
                 Integrals()
                 f=True
-            case 4:
+            case '4':
                 Vectors()
                 f=True
-            case 5:
+            case '5':
                 Permutation_Combination()
                 f=True
-            case 6:
+            case '6':
                 Complex_Numbers()
                 f=True
-            case 7:
+            case '7':
                 Trigonometry()
                 f=True
-            case 8:
+            case '8':
                 print(f'Thank you for playing {n}!!\n')
                 print('                  \U0001F64Fಶುಭಂ\U0001F64F')
                 f=True
@@ -68,11 +62,12 @@ def topic():
             case _:
                 print('Invalid input please try again')
 
+
 def question_structure(t,a,b,a1,a2,l):
     f=False
     while f==False:
         print(f'Question 1:\n{a}')
-        ans=int(input('Answer : '))
+        ans=input('Answer : ')
         if ans==a1:                
             print('\u2705 \033[32mCorrect\033[0m\n')
             z=False
@@ -84,7 +79,7 @@ def question_structure(t,a,b,a1,a2,l):
                     x=False
                     while x==False:
                         print(f'Question 2 : \n{b}')
-                        an=int(input('Answer : '))
+                        an=input('Answer : ')
                         print()
                         if an== a2:
                             print('\u2705 \033[32mCorrect\033[0m')
@@ -129,30 +124,30 @@ def question_structure(t,a,b,a1,a2,l):
                         y=True
                 else :
                     print('Invalid input please try again\n')
+                    
 
 @select_level
 def Algebra(level):
     t='Algebra'
     if level=='e':
         a='Evaluate : x\u00b2+1 for 𝑥=2.'
-        a1=5
+        a1='5'
         b='If 2y-8=0, then find y.'
-        a2=4
+        a2='4'
         l='easy'
         question_structure(t,a,b,a1,a2,l)
-        
     elif level=='m':
         a='Solve for x: 7(x+2)−5=3x+21'
-        a1=3
+        a1='3'
         b='y⁴ - 2y³ - 13y² + 14y + 24 = 0. Find the sum of solutions of y.'
-        a2=2
+        a2='2'
         l='medium'
         question_structure(t,a,b,a1,a2,l)
     elif level=='h':
         a='If x² + px + q = 0 has roots α and β, find the sum of p and q when α³ + β³ = 407 and α² + β² = 65.'
-        a1=17
+        a1='17'
         b='if a+b+c=5, ab+bc+ca=7, and abc=3 find the value of a³ + b³ + c³.'
-        a2=29
+        a2='29'
         l='hard'
         question_structure(t,a,b,a1,a2,l)
     pass
@@ -163,28 +158,25 @@ def Limits_Derivatives(level):
     t='Limits_Derivatives'
     if level=='e':
         a="Find the Limit: lim(x→2) (3x + 4)"
-        a1=10
+        a1='10'
         b= "Find f′(25) for f(x) = x²"
-        a2=625
+        a2='625'
         l='easy'
-        question_structure(t,a,b,a1,a2,l)
-        
+        question_structure(t,a,b,a1,a2,l)       
     elif level=='m':
         a="Find the Limit: lim(x→0) (sin(x) / x)"
-        a1=1
+        a1='1'
         b= "Find f′(7) if f(x) = 3x³ − 5x + 7"
-        a2=436
+        a2='436'
         l='medium'
         question_structure(t,a,b,a1,a2,l)
-
     elif level=='h':
-        a="Find the limit: lim(x→0) (sin(5x) − 5x) / x³"
-        a1=-21
+        a="If l=lim(x→0) (sin(5x) − 5x) / x³. Find l"
+        a1='-21'
         b="Find f′(1) for f(x) = x⁵·e³x·sin(2x)"
-        a2=111
+        a2='111'
         l='hard'
         question_structure(t,a,b,a1,a2,l)
-    
     pass
 
 def Integrals():
@@ -195,24 +187,23 @@ def Vectors(level):
     t='vectors'
     if level=='e':
         a="Find the magnitude of vector (3,4)?"
-        a1=5
+        a1='5'
         b="Find the dot product of (2,3) and (3,4)?"
-        a2=11
+        a2='11'
         l='easy'
         question_structure(t,a,b,a1,a2,l)
     elif level=='m':
         a="Find the resultant of two vectors having magnitude of 9 and 5 but act in opposite direction?"
-        a1=4
+        a1='4'
         b= "Find the resultant of two vectors having magnitude of 9 and 5 and act in same direction?"
-        a2=14
+        a2='14'
         l='medium'
         question_structure(t,a,b,a1,a2,l)
-
     elif level=='h':
         a="A vector (12,16) is inclined at an angle 60(degree) to the horizontal direction find the horizontal  components?"
-        a1=10
+        a1='10'
         b="If vector has magnitude 25 and makes one component is 7, find the other component?"
-        a2=24
+        a2='24'
         l='hard'
         question_structure(t,a,b,a1,a2,l)
     pass
@@ -223,24 +214,23 @@ def Permutation_Combination(level):
     t='vectors'
     if level=='e':
         a="How many ways can you arrange the letters of the word 'DOG'?"
-        a1=6
+        a1='6'
         b="How many ways can you choose 2 objects from 4?"
-        a2=6
+        a2='6'
         l='easy'
         question_structure(t,a,b,a1,a2,l)
     elif level=='m':
         a="How many 3-digit numbers can be formed using digits 1,2,3,4 without repetition?"
-        a1=24
+        a1='24'
         b= "In how many ways can 5 people sit in a row?"
-        a2=120
+        a2='120'
         l='medium'
         question_structure(t,a,b,a1,a2,l)
-
     elif level=='h':
         a= "In how many ways can 5 boys and 5 girls be seated alternately in a row?"
-        a1=28800
+        a1='28800'
         b="How many ways can you distribute 5 identical balls into 3 distinct boxes?"
-        a2=21
+        a2='21'
         l='hard'
         question_structure(t,a,b,a1,a2,l)      
     pass
@@ -251,54 +241,23 @@ def Complex_Numbers(level):
     t="Complex_Numbers"
     if level=='e':
         a= "Find the modulus of (3 + 4i)"
-        a1=5
+        a1='5'
         b="What is the real part of (6 + 9i)?"
-        a2=6
+        a2='6'
         l='easy'
         question_structure(t,a,b,a1,a2,l)
-        
     elif level=='m':
         a="Find the modulus of (6 - 8i)"
-        a1=10
+        a1='10'
         b='Find the real part of ( (3 + 4i)(5 − 2i)).'
-        a2=23
+        a2='23'
         l='medium'
         question_structure(t,a,b,a1,a2,l)
-
     elif level=='h':
         a="Simplify: ((2 + 5i)(3 - i)) / (1 + 2i) and find the sum of real and imaginary part"
-        a1=5
+        a1='5'
         b='Find the imaginary part of (4 + 3i)(2 - 7i)(1 + i).'
-        a2=-170
-        l='hard'
-        question_structure(t,a,b,a1,a2,l)
-    pass
-
-@select_level
-
-def Complex_Numbers(level):
-    t="Complex_Numbers"
-    if level=='e':
-        a= "Find the modulus of (3 + 4i)"
-        a1=5
-        b="What is the real part of (6 + 9i)?"
-        a2=6
-        l='easy'
-        question_structure(t,a,b,a1,a2,l)
-        
-    elif level=='m':
-        a="Find the modulus of (6 - 8i)"
-        a1=10
-        b='Find the real part of ( (3 + 4i)(5 − 2i)).'
-        a2=23
-        l='medium'
-        question_structure(t,a,b,a1,a2,l)
-
-    elif level=='h':
-        a="Simplify: ((2 + 5i)(3 - i)) / (1 + 2i) and find the sum of real and imaginary part"
-        a1=5
-        b='Find the imaginary part of (4 + 3i)(2 - 7i)(1 + i).'
-        a2=-170
+        a2='-170'
         l='hard'
         question_structure(t,a,b,a1,a2,l)
     pass
@@ -321,6 +280,7 @@ match c:
         Complex_Numbers()
     case 7:
         Trigonometry()
+
 
 
 
