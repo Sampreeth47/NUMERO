@@ -179,6 +179,7 @@ def Limits_Derivatives(level):
         question_structure(t,a,b,a1,a2,l)
     pass
 
+@select_level
 def Integrals(level):
     t='Integration'
     if level=='e':
@@ -202,7 +203,6 @@ def Integrals(level):
         a2='2'
         l='hard'
         question_structure(t,a,b,a1,a2,l)
-    pass
     pass
 @select_level
 
@@ -284,9 +284,31 @@ def Complex_Numbers(level):
         l='hard'
         question_structure(t,a,b,a1,a2,l)
     pass
-
-def Trigonometry():
     
+@select_level
+def Trigonometry():
+    t='Trigonometry'
+    if level=='e':
+        a="sin(30ᵒ)+cos(0ᵒ)+√3cos(30ᵒ)"
+        a1='3'
+        b="cos⁻¹(0)+sin⁻¹(1/2)-sin⁻¹(1)"
+        a2='30'
+        l='easy'
+        question_structure(t,a,b,a1,a2,l)
+    elif level=='m':
+        a="If sin(x)+cos(x)=0"
+        a1='-1'
+        b= "[sin(20ᵒ)cos(40ᵒ)+sin(40ᵒ)cos(20ᵒ)]/sin(60ᵒ)​"
+        a2='1'
+        l='medium'
+        question_structure(t,a,b,a1,a2,l)
+    elif level=='h':
+        a="[sin(75ᵒ)−sin(15ᵒ)]/[cos(15ᵒ)−cos(75ᵒ)]​​"
+        a1='1'
+        b="Given sin(x)+cos(x)=1 Find sin³(x)+cos³(x)"
+        a2='1'
+        l='hard'
+        question_structure(t,a,b,a1,a2,l)
     pass
 
 match c:
@@ -304,6 +326,7 @@ match c:
         Complex_Numbers()
     case 7:
         Trigonometry()
+
 
 
 
