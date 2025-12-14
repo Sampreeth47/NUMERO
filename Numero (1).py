@@ -179,7 +179,30 @@ def Limits_Derivatives(level):
         question_structure(t,a,b,a1,a2,l)
     pass
 
-def Integrals():
+def Integrals(level):
+    t='Integration'
+    if level=='e':
+        a="f(x)=∫(3x²−4x+5)dx with limits x=0 to x=2"
+        a1='10'
+        b="f(x)=∫(sin(x)+ cos(x))dx with lmits x=0 to x=π"
+        a2='2'
+        l='easy'
+        question_structure(t,a,b,a1,a2,l)
+    elif level=='m':
+        a="f(x)=∫eᶜᵒˢˣsinx for x=0 to x=2π"
+        a1='0'
+        b= "f(x)=∫2x/x²+1 for x=1 to x=3(Write in terms ln)"
+        a2='ln(5)'
+        l='medium'
+        question_structure(t,a,b,a1,a2,l)
+    elif level=='h':
+        a="f(x)=∫sin³x/cos⁵x for x=0 to x=π/4(Enter the decimal value)"
+        a1='0.25'
+        b="f(x)=∫(xˣ+(1-x)¹⁻ˣ)/x"
+        a2='2'
+        l='hard'
+        question_structure(t,a,b,a1,a2,l)
+    pass
     pass
 @select_level
 
@@ -263,6 +286,7 @@ def Complex_Numbers(level):
     pass
 
 def Trigonometry():
+    
     pass
 
 match c:
@@ -280,6 +304,7 @@ match c:
         Complex_Numbers()
     case 7:
         Trigonometry()
+
 
 
 
