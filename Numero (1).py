@@ -1,6 +1,6 @@
-print('\t\t\t\033[94mNUMERA\033[0m')
+print('\t\t\t\033[94mNUMERO\033[0m')
 n = input('\033[97mName : ')
-print(f'\nನಮಸ್ಕಾರ {n}!! Welcome to NUMERA.....')
+print(f'\nನಮಸ್ಕಾರ {n}!! Welcome to NUMERO.....')
 print("\033[91mಎಚ್ಚರಿಕೆ: ಬುದ್ಧಿವಂತರಿಗೆ ಮಾತ್ರ!!\n")
 
 
@@ -409,3 +409,4 @@ while f == False:
             f = True
         case _:
             print('Invalid input please try again!!')
+
